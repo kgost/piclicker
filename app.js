@@ -14,7 +14,7 @@ app.get( '/input/:input', function( req, res, next ) {
 		// turn on
 		case 0:
 			if ( !iclickerState.on ) {
-				gpio.setup( 7, gpio.DIR_HIGH, write( 7 ) );
+				gpio.setup( 7, gpio.DIR_LOW, write( 7 ) );
 			}
 			res.status( 200 ).json({
 				message: 'Action Preformed',
@@ -24,7 +24,7 @@ app.get( '/input/:input', function( req, res, next ) {
 		// turn off
 		case 1:
 			if ( iclickerState.on ) {
-				gpio.setup( 7, gpio.DIR_HIGH, write( 7 ) );
+				gpio.setup( 7, gpio.DIR_LOW, write( 7 ) );
 			}
 			res.status( 200 ).json({
 				message: 'Action Preformed',
@@ -33,7 +33,7 @@ app.get( '/input/:input', function( req, res, next ) {
 			break;
 		// press a
 		case 2:
-			gpio.setup( 11, gpio.DIR_HIGH, write( 11 ) );
+			gpio.setup( 11, gpio.DIR_LOW, write( 11 ) );
 			res.status( 200 ).json({
 				message: 'Action Preformed',
 				obj: iclickerState
@@ -41,7 +41,7 @@ app.get( '/input/:input', function( req, res, next ) {
 			break;
 		// press b
 		case 3:
-			gpio.setup( 13, gpio.DIR_HIGH, write( 13 ) );
+			gpio.setup( 13, gpio.DIR_LOW, write( 13 ) );
 			res.status( 200 ).json({
 				message: 'Action Preformed',
 				obj: iclickerState
@@ -49,7 +49,7 @@ app.get( '/input/:input', function( req, res, next ) {
 			break;
 		// press c
 		case 4:
-			gpio.setup( 15, gpio.DIR_HIGH, write( 15 ) );
+			gpio.setup( 15, gpio.DIR_LOW, write( 15 ) );
 			res.status( 200 ).json({
 				message: 'Action Preformed',
 				obj: iclickerState
@@ -57,7 +57,7 @@ app.get( '/input/:input', function( req, res, next ) {
 			break;
 		// press d
 		case 5:
-			gpio.setup( 29, gpio.DIR_HIGH, write( 29 ) );
+			gpio.setup( 29, gpio.DIR_LOW, write( 29 ) );
 			res.status( 200 ).json({
 				message: 'Action Preformed',
 				obj: iclickerState
@@ -65,7 +65,7 @@ app.get( '/input/:input', function( req, res, next ) {
 			break;
 		// press e
 		case 6:
-			gpio.setup( 31, gpio.DIR_HIGH, write( 31 ) );
+			gpio.setup( 31, gpio.DIR_LOW, write( 31 ) );
 			res.status( 200 ).json({
 				message: 'Action Preformed',
 				obj: iclickerState
