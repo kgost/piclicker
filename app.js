@@ -14,7 +14,7 @@ app.get( '/input/:input', function( req, res, next ) {
 		// turn on
 		case 0:
 			if ( !iclickerState.on ) {
-				gpio.setup( 7, gpio.DIR_LOW, write( 7 ) );
+				gpio.setup( 7, gpio.DIR_HIGH, write( 7 ) );
 			}
 			res.status( 200 ).json({
 				message: 'Action Preformed',
