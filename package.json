@@ -1,0 +1,14 @@
+{
+  "name": "piclicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "jack",
+  "license": "ISC",
+  "dependencies": {
+    "rpi-gpio": "^0.9.1"
+  }
+}
